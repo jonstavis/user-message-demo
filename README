@@ -1,0 +1,10 @@
+Sample application showing users, messages, and message attachments.
+
+Tested with Rails 3.2.1, Ruby 1.9.2
+
+Requires gems 'paperclip', 'will_paginate'
+
+Running:
+bundle install
+rake db:migrate
+rails server

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Subject:</b>
+  <%= @message.subject %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @message.body %>
+</p>
+
+<p>
+  <b>From user:</b>
+  <%= @message.from_user.email %>
+</p>
+
+<p>
+  <b>To user:</b>
+  <%= @message.to_user.email %>
+</p>
+
+<p>
+  <b>Attachments:</b>
+  <% @message.message_attachments.each do |ma| %>
+    <%= image_tag ma.data.url, :style => "max-height:300px;max-width:300px" %>
+  <% end %>
+</p>
+
+<%= link_to 'Home', users_path %>

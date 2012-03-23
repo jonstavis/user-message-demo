@@ -1,0 +1,6 @@
+<% messages.each do |message| %>
+<p>
+<%= link_to message.subject, message %> <b><%= message.created_at.strftime '%F %r' %></b>
+</p>
+<% end %>
+

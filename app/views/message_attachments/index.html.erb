@@ -1,0 +1,31 @@
+<h1>Listing message_attachments</h1>
+
+<table>
+  <tr>
+    <th>Data file name</th>
+    <th>Data content type</th>
+    <th>Data file size</th>
+    <th>Data updated at</th>
+    <th>Message</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @message_attachments.each do |message_attachment| %>
+  <tr>
+    <td><%= message_attachment.data_file_name %></td>
+    <td><%= message_attachment.data_content_type %></td>
+    <td><%= message_attachment.data_file_size %></td>
+    <td><%= message_attachment.data_updated_at %></td>
+    <td><%= message_attachment.message_id %></td>
+    <td><%= link_to 'Show', message_attachment %></td>
+    <td><%= link_to 'Edit', edit_message_attachment_path(message_attachment) %></td>
+    <td><%= link_to 'Destroy', message_attachment, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Message attachment', new_message_attachment_path %>
